@@ -1,0 +1,13 @@
+version: '2'
+services:
+  rbmq:
+    image: "rabbitmq:3-management"
+    container_name: test_rbmq
+    ports:
+     - "15672:15672"
+     - "5672:5672"
+    environment:
+     - RABBITMQ_DEFAULT_USER=tester
+     - RABBITMQ_DEFAULT_PASS=test_password
+    restart: always
+
